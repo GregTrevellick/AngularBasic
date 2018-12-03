@@ -1,0 +1,21 @@
+{
+  "author": "Me",
+  "classifications": [],
+  "description": "xcvzxcvjxzlckvbxclvkbzxclkvjzbxcvkl",
+  "name": "AngularBasic",
+  "defaultName": "AngularBasic",
+  "identity": "Sample.Template.CSharp",
+  "groupIdentity": "Sample.Template",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "shortName": "AngBas",
+  "sourceName": "AngularBasic",
+  "guids": [],
+  "primaryOutputs": [
+    {
+      "path": "AngularBasic.csproj"
+    }
+  ]
+}
