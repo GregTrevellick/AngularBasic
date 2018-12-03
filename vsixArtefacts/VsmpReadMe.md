@@ -1,16 +1,16 @@
-[GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/CleanArchitecture/pulls
+[GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/AngularBasic/pulls
 
-A solution template that can be used to build Domain-Driven Design (DDD)-based or simply well-factored, SOLID applications using ASP.NET Core. 
+A project template xxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxx. 
 
->##### Based on Steve Smith's [Clean Architecture](https://github.com/ardalis/CleanArchitecture).
+>##### Based on Matt Jeanes' [Clean Architecture](https://github.com/MattJeanes/AngularBasic).
 
-- [Overview](https://github.com/ardalis/CleanArchitecture#cleanarchitecture)
-- [Goals](https://github.com/ardalis/CleanArchitecture#goals)
-- [Design Decisions and Dependencies](https://github.com/ardalis/CleanArchitecture#design-decisions-and-dependencies)
-- [The Core Project](https://github.com/ardalis/CleanArchitecture#the-core-project)  
-- [The Infrastrucutre Project](https://github.com/ardalis/CleanArchitecture#the-infrastructure-project)  
-- [The Web Project](https://github.com/ardalis/CleanArchitecture#the-web-project)  
-- [The Test Project](https://github.com/ardalis/CleanArchitecture#the-test-project)
+- [Overview](https://github.com/ardalis/AngularBasic#AngularBasic)
+- [Goals](https://github.com/ardalis/AngularBasic#goals)
+- [Design Decisions and Dependencies](https://github.com/ardalis/AngularBasic#design-decisions-and-dependencies)
+- [The Core Project](https://github.com/ardalis/AngularBasic#the-core-project)  
+- [The Infrastrucutre Project](https://github.com/ardalis/AngularBasic#the-infrastructure-project)  
+- [The Web Project](https://github.com/ardalis/AngularBasic#the-web-project)  
+- [The Test Project](https://github.com/ardalis/AngularBasic#the-test-project)
 
 When you create a new project...
 

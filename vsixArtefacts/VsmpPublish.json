@@ -16,12 +16,12 @@
     "scaffolding"
   ],
   "identity": {
-    "internalName": "CleanArchitecture"
+    "internalName": "AngularBasic"
   },
   "overview": "..\\vsixArtefacts\\VsmpReadMe.md", //vsmp page content
   "priceCategory": "free",
   "publisher": "GregTrevellick",
-  "private": false,
+  "private": true,
   "qna": true,
-  "repo": "https://github.com/GregTrevellick/CleanArchitecture"
+  "repo": "https://github.com/GregTrevellick/AngularBasic"
 }
