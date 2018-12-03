@@ -4,3 +4,5 @@ node_modules
 generators
 *.log
 *.csproj.user
+/vsixTemplatePackSideWaffle/obj
+/vsixArtefacts/packages
