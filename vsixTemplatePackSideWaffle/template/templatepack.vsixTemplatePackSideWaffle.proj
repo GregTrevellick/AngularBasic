@@ -26,6 +26,8 @@
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/.vs/**/*" />
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/.git/**/*" />
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/packages/**/*" />
+    <ExcludeFromPackage Include="$(TemplateSourceRoot)**/vsixArtefacts/**/*" />
+    <ExcludeFromPackage Include="$(TemplateSourceRoot)**/vsixTemplatePackSideWaffle/**/*" />
 
     <TemplateFiles  Include="$(TemplateSourceRoot)/**/*" 
                     Exclude="@(ExcludeFromPackage)" />

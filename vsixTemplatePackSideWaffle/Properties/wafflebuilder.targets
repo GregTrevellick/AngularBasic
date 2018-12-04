@@ -8,8 +8,8 @@
        2.3 Add .nupkg files to vsix being created
     3. Find .vstemplate files under .template.config folders
     4. Foreach .vstemplate file found
-       4.1 Find vs NPD node from new element in .vstemplate file. If not found use default value
-       <may not be needed> 4.2 copy the .template.config file to obj/templates/<.vstemplate filename> </may not be needed>
+       4.1 Find vs NPD node from new element in .vstemplate file. If not found use default value <may not be needed> 
+       4.2 copy the .template.config file to obj/templates/<.vstemplate filename> </may not be needed>
        4.3 create .zip file from items and add to vsix at /output/ProjectTemplates/CSharp/<NPD node path from .vstemplate>/foo.zip
     -->
   <PropertyGroup>
@@ -18,7 +18,7 @@
 
   <Import Project="$(WaffleBuilderPropsFilepath)"
           Condition=" '$(WaffleBuilderPropsFilepath)' != '' and Exists('$(WaffleBuilderPropsFilepath)') " />
-  
+
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)'=='' ">Debug</Configuration>
     <TemplateSourceRoot Condition=" '$(TemplateSourceRoot)'=='' ">$(MSBuildProjectDirectory)\..\</TemplateSourceRoot>
@@ -67,7 +67,7 @@
     <ItemGroup>
       <TemplatePackNuGetProj Include="$(MSBuildProjectDirectory)/**/templatepack*.proj" />
     </ItemGroup>
-    <Message Text="Templates in [$(MSBuildProjectDirectory)] found: @(TemplatePackNuGetProj)" Importance="low" />
+    <Message Text="Templates in [$(MSBuildProjectDirectory)] found: @(TemplatePackNuGetProj)" Importance="high" />
   </Target>
 
   <Target Name="BuildTemplatePackNuGetProjFiles"
@@ -78,11 +78,13 @@
       <_cTemplateProj Condition=" '$(_cTemplateProj)' != '' ">$([System.IO.Path]::GetFullPath('$(_cTemplateProj)'))</_cTemplateProj>
       <_templateOutputPathFull>$([System.IO.Path]::GetFullPath('$(TemplateOutputPath)'))</_templateOutputPathFull>
     </PropertyGroup>
-    <Message Text="_templateOutputPathFull: $(_templateOutputPathFull)" />
-    <Message Text="building template proj: [$(_cTemplateProj)]" Importance="low"/>
+    <Message Text="_templateOutputPathFull: $(_templateOutputPathFull)" Importance="high"/>
+    <Message Text="building template proj: [$(_cTemplateProj)]" Importance="high"/>
 
     <MSBuild Projects="$(_cTemplateProj)" Targets="Restore" />
+    <Message Text="^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" Importance="high"/>
     <Message Text="Outer2:TemplateSourceRoot: [$(TemplateSourceRoot)]" Importance="high"/>
+    <Message Text="^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" Importance="high"/>
     <MSBuild Projects="$(_cTemplateProj)"
              Targets="Pack;GetNuGetPath;DebugInfo"
              Properties="Configuration=$(Configuration);TemplateSourceRoot=$(TemplateSourceRoot);PackageOutputPath=$(_templateOutputPathFull)"
@@ -100,12 +102,15 @@
     <PropertyGroup>
       <_templateOutputFullpath>$([System.IO.Path]::GetFullPath('$(TemplateOutputPath)'))</_templateOutputFullpath>
     </PropertyGroup>
-    <Message Text="_templateOutputFullpath: [$(_templateOutputFullpath)]" />
+    <Message Text="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" Importance="high"/>
+    <Message Text="_templateOutputFullpath: [$(_templateOutputFullpath)]" Importance="high"/>
+    <Message Text="TemplateNuGetPackagesToExcludeFromVsix: [$(TemplateNuGetPackagesToExcludeFromVsix)]" Importance="high"/>
+    <Message Text="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" Importance="high"/>
     <ItemGroup>
       <_templateNuGetPkgs Include="$(_templateOutputFullpath)**/*.nupkg"
                           Exclude="$(TemplateNuGetPackagesToExcludeFromVsix)" />
     </ItemGroup>
-    <Message Text="_templateNuGetPkgs: @(_templateNuGetPkgs)" />
+    <Message Text="_templateNuGetPkgs: @(_templateNuGetPkgs)" Importance="high"/>
     <ItemGroup>
       <VSIXSourceItem Include="%(_templateNuGetPkgs.Identity)">
         <!-- <VSIXSubPath>%(_ls-ItemTemplatesOutputs.OutputPathFolder)</VSIXSubPath> -->
@@ -131,17 +136,19 @@
   <Target Name="BuildVsTemplateFiles" DependsOnTargets="$(BuildVsTemplateFilesDependsOn)" />
 
   <Target Name="FindVstemplateFiles">
+    <Message Text="^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" Importance="high"/>
     <Message Text="Looking for .vstemplate files in [$(TemplateSourceRoot)]
-VsTemplateFilesExclude:[$(VsTemplateFilesExclude)]" Importance="low" />
+VsTemplateFilesExclude:[$(VsTemplateFilesExclude)]" Importance="high" />
+    <Message Text="^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" Importance="high"/>
     <ItemGroup>
       <_vsTemplateExcludeFiles Include="$(VsTemplateFilesExclude)"/>
       <_vstemplateTemp Include="$(TemplateSourceRoot)**/*.vstemplate" Exclude="@(_vsTemplateExcludeFiles)" />
 
       <VsTemplateFiles Include="$([System.IO.Path]::GetFullPath(' %(_vstemplateTemp.Identity) '))" />
     </ItemGroup>
-    <Message Text="_vstemplateTemp: [@(_vstemplateTemp)]" Importance="low" />
-    <Message Text="_vsTemplateExcludeFiles: @(_vsTemplateExcludeFiles)" Importance="low"/>
-    <Message Text=".vstemplate files found: [@(VsTemplateFiles)]" Importance="low" />
+    <Message Text="_vstemplateTemp: [@(_vstemplateTemp)]" Importance="high" />
+    <Message Text="_vsTemplateExcludeFiles: @(_vsTemplateExcludeFiles)" Importance="high"/>
+    <Message Text=".vstemplate files found: [@(VsTemplateFiles)]" Importance="high" />
   </Target>
 
   <PropertyGroup>
@@ -166,7 +173,7 @@ _vstemplatedir: $(_vstemplatedir)
 _vstemplatefullpath: $(_vstemplatefullpath)
 " Importance="high"/>
   </Target>
-  
+
   <Target Name="BuildZipForVstemplateFiles"
           Outputs="%(VsTemplateFiles.Identity)" DependsOnTargets="FindVstemplateFiles">
     <Message Text="BuildZipForVstemplateFiles:VsTemplateFiles: [@(VsTemplateFiles)] " Importance="high" />
