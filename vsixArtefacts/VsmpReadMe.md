@@ -1,6 +1,6 @@
 [GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/AngularBasic/pulls
 
-A gregt todo4 project template xxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxx. 
+Basic Angular TypeScript app for VS2017/VSCode, uses aspnet core, webpack, gulp, sass and yarn (optional). 
 
 >##### Based on Matt Jeanes' [Clean Architecture](https://github.com/MattJeanes/AngularBasic).
 
