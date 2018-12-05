@@ -24,10 +24,13 @@
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/*.user" />
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/*.suo" />
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/.vs/**/*" />
+    <ExcludeFromPackage Include="$(TemplateSourceRoot)**/.vscode/**/*" />
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/.git/**/*" />
+    <ExcludeFromPackage Include="$(TemplateSourceRoot)**/node_modules/**/*" />
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/packages/**/*" />
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/vsixArtefacts/**/*" />
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/vsixTemplatePackSideWaffle/**/*" />
+    <ExcludeFromPackage Include="$(TemplateSourceRoot)**/wwwroot/dist/**/*" />
 
     <TemplateFiles  Include="$(TemplateSourceRoot)/**/*" 
                     Exclude="@(ExcludeFromPackage)" />
