@@ -1,0 +1,14 @@
+OVERVIEW
+https://docs.microsoft.com/en-us/visualstudio/extensibility/how-to-use-wizards-with-project-templates?view=vs-2017
+
+
+
+CONVERT TO NET CORE
+https://www.danielcrabtree.com/blog/314/upgrading-to-net-core-and-net-standard-made-easy
+https://natemcmaster.com/blog/2017/03/09/vs2015-to-vs2017-upgrade/#approach-two-manually-convert
+dotnet migrate-2017 migrate "C:\_git\AngularBasic\vsixTemplatePackSideWaffle\vsixTemplatePackSideWaffle.csproj"
+
+
+
+TODO
+re-add a ref to AngularBasic inside vsixTemplatePackSideWaffle
