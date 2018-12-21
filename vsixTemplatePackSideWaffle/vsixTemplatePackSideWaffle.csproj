@@ -11,7 +11,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{978F2335-6F51-4623-87BF-CB2ECDD36FC6}</ProjectGuid>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
     <IncludeDebugSymbolsInVSIXContainer>true</IncludeDebugSymbolsInVSIXContainer>
@@ -27,6 +27,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <WaffleBuilderTargetsPath Condition=" '$(WaffleBuilderTargetsPath)'=='' ">$(MSBuildProjectDirectory)\Properties\wafflebuilder.targets</WaffleBuilderTargetsPath>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(WaffleBuilderTargetsPath)" Condition="Exists('$(WaffleBuilderTargetsPath)')" />
@@ -88,5 +90,29 @@
     <Reference Include="System.Windows.Forms">
       <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Windows.Forms.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Remove="C:\Users\gtrev\.nuget\packages\microsoft.visualstudio.sdk.analyzers\15.8.36\build\AdditionalFiles\vs-threading.MainThreadAssertingMethods.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Remove="C:\Users\gtrev\.nuget\packages\microsoft.visualstudio.threading.analyzers\15.8.168\build\AdditionalFiles\vs-threading.MainThreadAssertingMethods.txt" />
+    <AdditionalFiles Remove="C:\_git\AngularBasic\vsixArtefacts\packages\Microsoft.VisualStudio.SDK.Analyzers.15.8.36\build\AdditionalFiles\vs-threading.MainThreadAssertingMethods.txt" />
+    <AdditionalFiles Remove="C:\_git\AngularBasic\vsixArtefacts\packages\Microsoft.VisualStudio.SDK.Analyzers.15.8.36\build\AdditionalFiles\vs-threading.MainThreadSwitchingMethods.txt" />
+    <AdditionalFiles Remove="C:\_git\AngularBasic\vsixArtefacts\packages\Microsoft.VisualStudio.SDK.Analyzers.15.8.36\build\AdditionalFiles\vs-threading.MembersRequiringMainThread.txt" />
+    <AdditionalFiles Remove="C:\_git\AngularBasic\vsixArtefacts\packages\Microsoft.VisualStudio.Threading.Analyzers.15.8.168\build\AdditionalFiles\vs-threading.MainThreadAssertingMethods.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Remove="C:\Users\gtrev\.nuget\packages\microsoft.visualstudio.sdk.analyzers\15.8.36\build\AdditionalFiles\vs-threading.MainThreadSwitchingMethods.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Remove="C:\Users\gtrev\.nuget\packages\microsoft.visualstudio.threading.analyzers\15.8.168\build\AdditionalFiles\vs-threading.MainThreadSwitchingMethods.txt" />
+    <AdditionalFiles Remove="C:\_git\AngularBasic\vsixArtefacts\packages\Microsoft.VisualStudio.Threading.Analyzers.15.8.168\build\AdditionalFiles\vs-threading.MainThreadSwitchingMethods.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Remove="C:\Users\gtrev\.nuget\packages\microsoft.visualstudio.sdk.analyzers\15.8.36\build\AdditionalFiles\vs-threading.MembersRequiringMainThread.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Remove="C:\Users\gtrev\.nuget\packages\microsoft.visualstudio.threading.analyzers\15.8.168\build\AdditionalFiles\vs-threading.MembersRequiringMainThread.txt" />
+    <AdditionalFiles Remove="C:\_git\AngularBasic\vsixArtefacts\packages\Microsoft.VisualStudio.Threading.Analyzers.15.8.168\build\AdditionalFiles\vs-threading.MembersRequiringMainThread.txt" />
   </ItemGroup>
 </Project>

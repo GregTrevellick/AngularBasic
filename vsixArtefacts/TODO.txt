@@ -13,3 +13,12 @@ dotnet migrate-2017 migrate "C:\_git\AngularBasic\vsixTemplatePackSideWaffle\vsi
 
 TODO
 re-add a ref to AngularBasic inside vsixTemplatePackSideWaffle
+
+
+SIGNING
+1) paste key.snk into C:\_git\AngularBasic\vsixTemplatePackSideWaffle\obj\Debug
+2) open cmd prompt (not powershell)
+3) cd C:\_git\AngularBasic\vsixTemplatePackSideWaffle\obj\Debug
+4) "C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\sn.exe" -p key.snk outfile.key.
+5) "C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\sn.exe" -t outfile.key.
+6) make a note of public key e.g. 3479ee1f7df13b97
