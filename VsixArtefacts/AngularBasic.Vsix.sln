@@ -27,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularBasic", "..\AngularBasic\AngularBasic.csproj", "{C18A0BB8-6D17-43B9-B22D-EB647F95269E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vsixTemplatePackSideWaffle", "..\vsixTemplatePackSideWaffle\vsixTemplatePackSideWaffle.csproj", "{978F2335-6F51-4623-87BF-CB2ECDD36FC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VsixTemplatePackSideWaffle", "..\vsixTemplatePackSideWaffle\VsixTemplatePackSideWaffle.csproj", "{978F2335-6F51-4623-87BF-CB2ECDD36FC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

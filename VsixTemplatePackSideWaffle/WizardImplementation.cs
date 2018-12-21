@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TemplateWizard;
 using System.Windows.Forms;
 using EnvDTE;
 
-namespace MyProjectWizard
+namespace VsixTemplatePackSideWaffle
 {
     public class WizardImplementation : IWizard
     {

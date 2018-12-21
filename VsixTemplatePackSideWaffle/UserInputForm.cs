@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace MyProjectWizard
+namespace VsixTemplatePackSideWaffle
 {
     public partial class UserInputForm : Form
     {
