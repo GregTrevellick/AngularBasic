@@ -27,7 +27,7 @@
     <FullClassName>Microsoft.VisualStudio.TemplateEngine.Wizard.TemplateEngineWizard</FullClassName>
   </WizardExtension>
   <WizardExtension>
-    <Assembly>vsixTemplatePackSideWaffle, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=3479ee1f7df13b97</Assembly>
-    <FullClassName>vsixTemplatePackSideWaffle.WizardImplementation</FullClassName>
+    <Assembly>VsixTemplatePackSideWaffle, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=3479ee1f7df13b97</Assembly>
+    <FullClassName>VsixTemplatePackSideWaffle.WizardImplementation</FullClassName>
   </WizardExtension>
 </VSTemplate>

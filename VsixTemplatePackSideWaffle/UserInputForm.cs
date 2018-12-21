@@ -24,6 +24,7 @@ namespace VsixTemplatePackSideWaffle
             textBox1.Size = new System.Drawing.Size(70, 20);
             this.Controls.Add(textBox1);
         }
+
         public static string CustomMessage
         {
             get
@@ -35,6 +36,7 @@ namespace VsixTemplatePackSideWaffle
                 customMessage = value;
             }
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             customMessage = textBox1.Text;
