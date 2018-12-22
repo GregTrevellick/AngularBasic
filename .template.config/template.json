@@ -1,0 +1,21 @@
+{
+  "author": "Me",
+  "classifications": [],
+  "description": "Basic Angular TypeScript app for VS2017/VSCode, uses aspnet core, webpack, gulp, sass and yarn (optional)",
+  "name": "Angular Basic",
+  "defaultName": "AngularBasic",
+  "identity": "Angular.Basic.CSharp",
+  "groupIdentity": "Angular.Basic",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "shortName": "AngBas",
+  "sourceName": "AngularBasicProjectTemplate",
+  "guids": [],
+  "primaryOutputs": [
+    {
+      "path": "AngularBasic\\AngularBasic.csproj"
+    }
+  ]
+}

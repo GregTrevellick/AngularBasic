@@ -1,0 +1,24 @@
+OVERVIEW
+https://docs.microsoft.com/en-us/visualstudio/extensibility/how-to-use-wizards-with-project-templates?view=vs-2017
+
+
+
+CONVERT TO NET CORE
+https://www.danielcrabtree.com/blog/314/upgrading-to-net-core-and-net-standard-made-easy
+https://natemcmaster.com/blog/2017/03/09/vs2015-to-vs2017-upgrade/#approach-two-manually-convert
+file:///C:/Users/gtrev/Documents/Portability%20Analysis/ApiPortAnalysis.html#Portability%20Summary
+dotnet migrate-2017 migrate "C:\_git\AngularBasic\vsixTemplatePackSideWaffle\vsixTemplatePackSideWaffle.csproj"
+
+
+
+TODO
+re-add a ref to AngularBasic inside vsixTemplatePackSideWaffle
+
+
+SIGNING
+1) paste key.snk into C:\_git\AngularBasic\vsixTemplatePackSideWaffle\obj\Debug
+2) open cmd prompt (not powershell)
+3) cd C:\_git\AngularBasic\vsixTemplatePackSideWaffle\obj\Debug
+4) "C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\sn.exe" -p key.snk outfile.key.
+5) "C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\sn.exe" -t outfile.key.
+6) make a note of public key e.g. 3479ee1f7df13b97

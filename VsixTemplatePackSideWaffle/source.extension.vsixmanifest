@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+	<Metadata>
+		<Identity Id="D395F9C1-2416-4C9E-AB85-4AEC5ED8A74E" Version="1.0" Language="en-US" Publisher="Greg Trevellick" />
+		<DisplayName>Angular Basic</DisplayName>
+		<Description xml:space="preserve">Basic Angular TypeScript app for VS2017/VSCode, uses aspnet core, webpack, gulp, sass and yarn (optional)</Description>
+		<MoreInfo>https://github.com/GregTrevellick/AngularBasic</MoreInfo>
+		<License>LICENSE.txt</License>
+		<GettingStartedGuide>https://github.com/MattJeanes/AngularBasic</GettingStartedGuide>
+		<ReleaseNotes>https://github.com/GregTrevellick/AngularBasic/blob/master/vsixArtefacts/CHANGELOG.md</ReleaseNotes>
+		<Icon>Resources\VsixExtensionPreview_90x90.png</Icon>
+		<PreviewImage>Resources\VsixExtensionPreview_175x175.png</PreviewImage>
+		<Tags>todo</Tags>
+	</Metadata>
+	<Installation>
+		<InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0]" />
+	</Installation>
+	<Dependencies>
+		<Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+	</Dependencies>
+	<Prerequisites>
+		<Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,16.0)" DisplayName="Visual Studio core editor" />
+	</Prerequisites>
+	<Assets>
+		<Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+		<Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Output\Templates" />
+		<Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="AngularBasic" d:TargetPath="|AngularBasic;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+		<Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" AssemblyName="|%CurrentProject%;AssemblyName|" />
+	</Assets>
+</PackageManifest>
